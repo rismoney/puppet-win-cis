@@ -1,0 +1,2 @@
+CIS_CCE_25589_3,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,dword,0
+CIS_CCE_24075_4,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,AuditBaseObjects,dword,0
