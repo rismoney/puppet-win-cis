@@ -1,0 +1,2 @@
+reference,domaincontroller,memberserver,reghive,key,keyname,keytype,keyvalue
+cis_cce_0,true,true,HKEY_LOCAL_MACHINE,Fakekey,FakeKeyname,REG_SZ,"Fake"

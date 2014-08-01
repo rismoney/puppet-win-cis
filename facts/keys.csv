@@ -1,0 +1,14 @@
+reference,domaincontroller,memberserver,reghive,key,keyname,keytype,keyvalue
+cis_cce_25589_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,REG_DWORD,0
+cis_cce_24075_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,auditbaseobjects,REG_DWORD,0
+cis_cce_24923_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,fullprivilegeauditing,REG_BINARY,00
+cis_cce_24252_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,scenoapplylegacyauditpolicy,REG_DWORD,1
+cis_cce_23988_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,crashonauditfail,REG_DWORD,0
+cis_cce_24640_5,true,true,HKEY_LOCAL_MACHINE,Software\policies\Microsoft\Windows NT\DCOM,MachineAccessRestriction,REG_BINARY,absent
+cis_cce_25572_9,true,true,HKEY_LOCAL_MACHINE,Software\policies\Microsoft\Windows NT\DCOM,MachineLaunchRestriction,REG_BINARY,absent
+cis_cce_25248_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,undockwithoutlogon,REG_DWORD,1
+cis_cce_24607_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateCDRoms,REG_SZ,0
+cis_cce_23668_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateFloppies,REG_SZ,0
+cis_cce_25217_1,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateDASD,REG_SZ,0
+cis_cce_25176_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers,AddPrinterDrivers,REG_DWORD,1
+cis_cce_25305_4,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,SubmitControl,REG_DWORD,absent
