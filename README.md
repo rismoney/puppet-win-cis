@@ -6,11 +6,12 @@ Puppet module to manage CIS compliance for windows machines
 Initial effort: It's audit time.  Remediation comes later!
 
 Create facter facts to validate systems compliance.
-Approach: Dynamically create facter facts from an erb template to avoid as much manual effort.
+
+Approach: Create a facter fact that can read a CSV file for all CIS facts and create
+facts based on that.
 
 Status:
-Draft of Registry facter facts generator is done.  At this point simply modify the registry
-keys in the keys.csv and run the factgen.  This will spit out facter facts that do the following:
+Scrapped factgen approach.  One fact to rule them all!
 
 ```csv
 factname,hive,keyname,key,type,value
