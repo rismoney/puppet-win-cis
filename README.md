@@ -38,5 +38,10 @@ If key does not exist "undefined" will be returned
 
 Note: all facter facts are strings regardless of their underlying registry key type
 
+Current Usage:
+Add module to your puppet infrastructure
+Populate csv file with benchmark reccomendations
+Run ruby factstub_gen.rb
+Profit!
 
 We welcome contributions so open a pull request in a new branch!
