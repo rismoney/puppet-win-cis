@@ -75,17 +75,22 @@ module Rismoney
         end
       return returnval
     end 
-  
+
+    def fact_eval(keyval,sot)
+      case keyval
+        when "undefined" then fact_name = "undefined"
+        when sot then fact_name = "pass"
+        else fact_name = "fail"
+      end
+      fact_name
+    end
+
     def windows_value item
       reg_keytype = item[:reghive].to_sym
       method_sym = reghive_table[reg_keytype]
       hive = method_sym
       keyval = getKeyValue(hive,item[:key],item[:keyname])
-      case keyval
-        when "undefined" then fact_name = "undefined"
-        when item[:keyvalue] then fact_name = "pass"
-        else fact_name = "fail"
-      end
+      fact_eval keyval,item[:keyvalue]
       rescue LoadError
         continue 
       rescue 
