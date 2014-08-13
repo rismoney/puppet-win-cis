@@ -14,9 +14,12 @@ Status:
 Scrapped factgen approach.  One fact to rule them all!
 
 ```csv
-factname,hive,keyname,key,type,value
-CIS_CCE_25589_3,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,dword,0
+reference,domaincontroller,memberserver,reghive,key,keyname,keytype,keyvalue
+cis_cce_25589_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,REG_DWORD,0
+cis_cce_24075_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,auditbaseobjects,REG_DWORD,0
 ```
+
+note to self: need to update to Pass/Fail instead of yes/no
 
 In the above example if the registry value of LimitBlankPasswordUse is 0 "yes" will be returned.
 

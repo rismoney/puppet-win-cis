@@ -11,6 +11,14 @@ module Rismoney
       end
     end
 
+    def getfilename
+      if ENV.key?('CIS_MOCKING')
+        return ENV['CIS_MOCKING'].to_s
+      else
+        return 'keys.csv'
+      end
+    end
+
     def csvprocess(csv_array)
       result = []
       return result if csv_array.nil? || csv_array.empty?
@@ -26,8 +34,7 @@ module Rismoney
     def csvread(filename)
       input_file_path = File.expand_path(filename,File.dirname(__FILE__))
       config = CSV.read(input_file_path)
-      config_data = csvprocess(config)
-      return config_data
+      return config
     end
 
     def reghive_table
@@ -88,9 +95,12 @@ module Rismoney
 end
 
 cis=Rismoney::Cis.new
-csvdata = cis.csvread 'keys.csv'
+filename = cis.getfilename
+csv = cis.csvread filename
+csv_data = cis.csvprocess(csv)
+
 domainrole=cis.isdc Facter.value(:ise_domainrole)
-  csvdata.each do |item|
+  csv_data.each do |item|
     if domainrole[:domaincontroller] == item[:domaincontroller].to_s or domainrole[:memberserver]  == item[:memberserver].to_s
       Facter.add(item[:reference]) do
       setcode { cis.value item}
