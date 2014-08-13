@@ -108,10 +108,35 @@ describe 'Rismoney::Cis' do
   end
 
   describe 'csvread(filename)' do
-    it 'csv read reads in a csv file into a value' do
+    it 'csvread should read a csv file into a value' do
       filename = 'fake.csv'
       @cisclass.csvread(filename).should == @rawcsv
     end
+  end
+
+  describe 'fact_eval(keyval,sot)' do
+    context "value and source of true are ==" do
+      it 'v read reads in a csv file into a value' do
+        keyval='1'
+        sot='1'
+        @cisclass.fact_eval(keyval,sot).should == 'pass'
+      end
+    end
+    context "value and source of true are !=" do
+      it 'v read reads in a csv file into a value' do
+        keyval='1'
+        sot='0'
+        @cisclass.fact_eval(keyval,sot).should == 'fail'
+      end
+    end
+    context "value and source of true are ==" do
+      it 'v read reads in a csv file into a value' do
+        keyval='undefined'
+        sot='1'
+        @cisclass.fact_eval(keyval,sot).should == 'undefined'
+      end
+    end
+ 
   end
 
   describe 'isdc(whatami)' do
