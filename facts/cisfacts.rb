@@ -60,12 +60,17 @@ module Rismoney
     end
 
     def getKeyValue(hive, key_path, key_name) 
-      require 'win32/registry'
-      reg_obj=hive.open(key_path, Win32::Registry::KEY_READ) 
+      if RUBY_PLATFORM =~ /mswin|mingw32|windows/
+        require 'win32/registry'
+      end
       begin 
+        reg_obj=hive.open(key_path, Win32::Registry::KEY_READ) 
         reg_typ, reg_val = reg_obj.read(key_name) 
-      rescue Win32::Registry::Error 
-        return "undefined"
+      #need to investigate error handling when rspec'ing
+      #rescue Win32::Registry::Error 
+      #  return "undefined"
+      rescue 
+        return 'undefined'
       end
         case reg_typ
           # treat everything as strings since thats what facter uses on puppet 2.x

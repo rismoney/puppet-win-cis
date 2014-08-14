@@ -138,6 +138,36 @@ describe 'Rismoney::Cis' do
     end
  
   end
+  
+  describe 'windows_value item' do
+    before :each do
+      Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo',:HKEY_CURRENT_USER=>'bar'})
+      Rismoney::Cis.any_instance.stubs(:getKeyValue).returns('Fake')
+    end
+    it 'windows_value returns Pass/Fail or undefined for a reference number' do
+      item = @csv_ary[0]
+      @cisclass.windows_value(item).should == "pass"
+    end
+  end
+
+   describe 'windows_value item' do
+    before :each do
+      Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo',:HKEY_CURRENT_USER=>'bar'})
+      Rismoney::Cis.any_instance.stubs(:getKeyValue).returns('NotFake')
+    end
+    it 'windows_value returns Pass/Fail or undefined for a reference number' do
+      item = @csv_ary[0]
+      @cisclass.windows_value(item).should == "fail"
+    end
+  end
+
+  describe 'getKeyValue(hive, key_path, key_name)' do
+    it 'is an abortion on linux testing frameworks!' do
+      hive,key_path,key_name = 'busted'
+      # we only test the error case since we need to stub the whole gem
+      @cisclass.getKeyValue(hive, key_path, key_name).should == "undefined"
+    end
+  end
 
   describe 'isdc(whatami)' do
     it 'by default returns memberserver=>true domaincontroller=> false' do
