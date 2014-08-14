@@ -62,6 +62,8 @@ gem 'travis'
 # https://github.com/travis-ci/travis-lint
 gem 'travis-lint'
 
+gem 'mime-types', "<= 2.2", :require => false
+gem 'coveralls', :require => false
 
 if File.exists? "#{__FILE__}.local"
   eval(File.read("#{__FILE__}.local"), binding)

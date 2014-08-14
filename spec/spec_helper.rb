@@ -12,6 +12,7 @@ gems = [
   'mocha/setup', # http://gofreerange.com/mocha/docs/Mocha/Configuration.html
   'jumanjiman_spec_helper',
   'puppet',
+  'coveralls',
 ]
 begin
   gems.each {|gem| require gem}
@@ -24,6 +25,8 @@ rescue => e
   warn horizontal_rule(e.message.length)
   exit(1)
 end
+
+Coveralls.wear!
 
 RSpec.configure do |c|
   # https://github.com/jumanjiman/jumanjiman_spec_helper#shared-contexts
