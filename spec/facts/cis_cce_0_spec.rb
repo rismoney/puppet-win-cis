@@ -1,18 +1,17 @@
 # vim: set ts=2 sw=2 ai et:
 require 'spec_helper'
 require 'registry'
-#require File.join(File.dirname(__FILE__), '../../', 'facts', 'cis_cce_23988_9.rb')
 
 describe "on Windows" do
   before :each do
     ENV['CIS_MOCKING']="fake.csv"
-    load File.join(File.dirname(__FILE__), '../../', 'facts', 'cis_cce_0.rb')
+    load File.join(File.dirname(__FILE__), '../../', 'lib', 'facter', 'cis_cce_0.rb')
   end
 
   describe "cis_cce_0" do
     before :each do
       Facter.fact(:kernel).stubs(:value).returns('windows')
-      load File.join(File.dirname(__FILE__), '../../', 'facts', 'ise_domain_role.rb')
+      #load File.join(File.dirname(__FILE__), '../../', 'facts', 'ise_domain_role.rb')
       # note no registry gem on linux, so we stub all win32::registry methods
       Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo',:HKEY_CURRENT_USER=>'bar'})
     end
@@ -38,7 +37,7 @@ end
 describe 'other OS' do
   before :each do
     ENV['CIS_MOCKING']="fake.csv"
-    load File.join(File.dirname(__FILE__), '../../', 'facts', 'cis_cce_0.rb')
+    #load File.join(File.dirname(__FILE__), '../../', 'facts', 'cis_cce_0.rb')
   end
 
   context "when kernel => 'Linux'" do
