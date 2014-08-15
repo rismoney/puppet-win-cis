@@ -1,6 +1,6 @@
 require 'erb'
 require 'csv'
-path_to_csv = 'facts/keys.csv'
+path_to_csv = 'lib/facter/keys.csv'
 name = []
 csv_contents = CSV.read(path_to_csv)
 csv_contents.shift
@@ -12,7 +12,7 @@ $LOAD_PATH.unshift path unless $LOAD_PATH.member?(path)
 load "cisfacts.rb"
 END
 
-  File.open("facts/#{fact_name}.rb","w") do |file|
+  File.open("lib/facter/#{fact_name}.rb","w") do |file|
     file.puts content
   end
 end
