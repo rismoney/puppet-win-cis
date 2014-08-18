@@ -19,6 +19,15 @@ module Rismoney
       end
     end
 
+    def gettailorfilename
+      if ENV.key?('CIS_MOCKING')
+        return ENV['CIS_MOCKING_TAILOR'].to_s
+      else
+        return 'tailor.csv'
+      end
+    end
+
+
     def csvprocess(csv_array)
       result = []
       return result if csv_array.nil? || csv_array.empty?
@@ -108,6 +117,9 @@ cis=Rismoney::Cis.new
 filename = cis.getfilename
 csv = cis.csvread filename
 csv_data = cis.csvprocess(csv)
+tailor_filename = cis.gettailorfilename
+tailor = cis.csvread tailor_filename
+tailor_data = cis.csvprocess(tailor)
 
 domainrole=cis.isdc Facter.value(:ise_domainrole)
   csv_data.each do |item|
