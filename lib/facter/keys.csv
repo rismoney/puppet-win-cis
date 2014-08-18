@@ -30,7 +30,7 @@ cis_cce_24264_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\Curre
 cis_cce_23704_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,PasswordExpiryWarning,REG_DWORD,14
 cis_cce_25643_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,ForceUnlockLogon,REG_DWORD,0
 cis_cce_24154_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,scremoveoption,REG_SZ,0
-cis_cce_22731_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,MaxDevicePasswordFailedAttempts,REG_DWORD,10
+cis_cce_22731_4,false,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,MaxDevicePasswordFailedAttempts,REG_DWORD,10
 cis_cce_24969_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,RequireSecuritySignature,REG_DWORD,0
 cis_cce_24740_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,EnableSecuritySignature,REG_DWORD,1
 cis_cce_24751_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,EnablePlainTextPassword,REG_DWORD,0
