@@ -10,11 +10,15 @@ Vision: CIS themselves engages in this repo
 
 Create facter facts to validate systems compliance.
 
-Approach: Create a facter fact that can read a CSV file for all CIS facts and create
+Primary Approach: Create a facter fact that can read a CSV file for all CIS facts and create
 facts based on that.
 
+Long Term Approach: Tie Facter into a SCAP xml file as described (http://csrc.nist.gov/publications/nistpubs/800-126/sp800-126.pdf)[here]
+The technical_mechanism element details the approach and settings.  This is designed to be machine parseable and would fit nicely
+into facter.
+
 Status:
-- [x] created factstub generator
+- [x] created factstub generator for testing (not required)
 - [x] sample keys.csv file
 - [x] cisfacts rspec testing
 - [ ] true windows confinement (reports n/a on non-windows)
