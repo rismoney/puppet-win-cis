@@ -11,4 +11,94 @@ cis_cce_24607_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\Curre
 cis_cce_23668_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateFloppies,REG_SZ,0
 cis_cce_25217_1,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateDASD,REG_SZ,0
 cis_cce_25176_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers,AddPrinterDrivers,REG_DWORD,1
-cis_cce_25305_4,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,SubmitControl,REG_DWORD,absent
+cis_cce_25305_4,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,SubmitControl,REG_DWORD,0
+cis_cce_24692_6,true,false,KEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RefusePasswordChange,REG_DWORD,0
+cis_cce_24465_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RequireSignorSeal,REG_DWORD,1
+cis_cce_24414_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,SealSecureChannel,REG_DWORD,1
+cis_cce_24812_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,SignSecureChannel,REG_DWORD,1
+cis_cce_24243_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,DisablePasswordChange,REG_DWORD,0
+cis_cce_23596_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,MaximumPasswordAge,REG_DWORD,30
+cis_cce_25198_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RequireStrongKey,REG_DWORD,1
+cis_cce_25018_3,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,DontDisplayLockedUserId,REG_DWORD,3
+cis_cce_25355_9,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,LegalNoticeText,REG_SZ,present
+cis_cce_24020_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,LegalNoticeCaption,REG_SZ,present
+cis_cce_24408_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,scforceoption,REG_DWORD,0
+cis_cce_24748_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,DontDisplayLastUserName,REG_DWORD,1
+cis_cce_25804_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,disablecad,REG_DWORD,0
+cis_cce_23043_3,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,InactivityTimeoutSecs,REG_DWORD,900
+cis_cce_24264_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,CachedLogonsCount,REG_SZ,4
+cis_cce_23704_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,PasswordExpiryWarning,REG_DWORD,14
+cis_cce_25643_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,ForceUnlockLogon,REG_DWORD,0
+cis_cce_24154_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,scremoveoption,REG_SZ,0
+cis_cce_22731_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,MaxDevicePasswordFailedAttempts,REG_DWORD,10
+cis_cce_24969_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,RequireSecuritySignature,REG_DWORD,0
+cis_cce_24740_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,EnableSecuritySignature,REG_DWORD,1
+cis_cce_24751_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanWorkstation\Parameters,EnablePlainTextPassword,REG_DWORD,0
+cis_cce_24502_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,SMBServerNameHardeningLevel,REG_DWORD,O
+cis_cce_23897_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,autodisconnect,REG_DWORD,15
+cis_cce_23716_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,requiresecuritysignature,REG_DWORD,1
+cis_cce_24353_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,enablesecuritysignature,REG_DWORD,1
+cis_cce_24148_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,enableforcedlogoff,REG_DWORD,1
+cis_cce_24205_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\CrashControl,AutoReboot,REG_DWORD,0
+cis_cce_24217_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanmanServer\Parameters,AutoShareServer,REG_DWORD,0
+cis_cce_24977_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,EnableICMPRedirect,REG_DWORD,0
+cis_cce_24074_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Lanmanserver\Parameters,Hidden,REG_BINARY,1
+cis_cce_24310_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,KeepAliveTime,REG_DWORD,300000
+cis_cce_24253_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\IPSEC,NoDefaultExempt,REG_DWORD,not defined
+cis_cce_23715_6,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Netbt\Parameters,NoNameReleaseOnDemand,REG_DWORD,1
+cis_cce_23677_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,PerformRouterDiscovery,REG_DWORD,0
+cis_cce_25202_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip6\Parameters,TcpMaxDataRetransmissions,REG_DWORD,5
+cis_cce_25455_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,TcpMaxDataRetransmissions,REG_DWORD,5
+cis_cce_24927_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AutoAdminLogon,REG_SZ,0
+cis_cce_24452_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip6\Parameters,DisableIPSourceRouting,REG_DWORD,2
+cis_cce_24968_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,DisableIPSourceRouting,REG_DWORD,2
+cis_cce_23462_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,SafeDllSearchMode,REG_DWORD,Enabled
+cis_cce_24993_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,ScreenSaverGracePeriod,REG_SZ,0
+cis_cce_25510_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Eventlog\Security,WarningLevel,REG_DWORD,0.9
+cis_cce_23358_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,DisableDomainCreds,REG_DWORD,1
+cis_cce_25466_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,NullSessionPipes,REG_MULTI_SZ,tbd
+cis_cce_25592_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,NullSessionShares,REG_MULTI_SZ,tbd
+cis_cce_24597_7,true,true,HKEY_LOCAL_MACHINE,tbd,tbd,tbd,tbd
+cis_cce_24774_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,RestrictAnonymous,REG_DWORD,2
+cis_cce_23082_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,RestrictAnonymousSAM,REG_DWORD,1
+cis_cce_23807_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,EveryoneIncludesAnonymous,REG_DWORD,0
+cis_cce_25426_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths,Machine,REG_MULTI_SZ,tbd
+cis_cce_23899_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths,Machine,REG_MULTI_SZ,tbd
+cis_cce_24564_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LanManServer\Parameters,restrictnullsessaccess,REG_DWORD,1
+cis_cce_22742_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,ForceGuest,REG_DWORD,0
+cis_cce_25299_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\pku2u,AllowOnlineID,REG_DWORD,tbd
+cis_cce_24147_1,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters,SupportedEncryptionTypes,undefined,undefined
+cis_cce_25367_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,ClientAllowedNTLMServers,undefined,undefined
+cis_cce_23483_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Netlogon\Parameters,DCAllowedNTLMServers,undefined,undefined
+cis_cce_23338_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,AuditReceivingNTLMTraffic,REG_DWORD,0
+cis_cce_24238_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Netlogon\Parameters,AuditNTLMInDomain,REG_DWORD,0
+cis_cce_24393_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Netlogon\Parameters,RestrictNTLMInDomain,REG_DWORD,0
+cis_cce_25095_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,RestrictSendingNTLMTraffic,REG_DWORD,0
+cis_cce_25508_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,UseMachineId,REG_DWORD,1
+cis_cce_25531_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,allownullsessionfallback,REG_DWORD,0
+cis_cce_24150_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,NoLMHash,REG_DWORD,enabled
+cis_cce_24650_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LmCompatibilityLevel,REG_DWORD,5
+cis_cce_25245_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\LDAP,LDAPClientIntegrity,REG_DWORD,2
+cis_cce_24783_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinClientSec,REG_DWORD,536870912
+cis_cce_25264_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,NTLMMinServerSec,REG_DWORD,536870912
+cis_cce_24470_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Setup\RecoveryConsole,securitylevel,REG_DWORD,1
+cis_cce_25274_2,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Setup\RecoveryConsole,setcommand,REG_DWORD,0
+cis_cce_25100_9,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,ShutdownWithoutLogon,REG_SZ,0
+cis_cce_25120_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager\Memory Management,ClearPageFileAtShutdown,REG_DWORD,0
+cis_cce_23711_5,true,true,HKEY_LOCAL_MACHINE,Software\Policies\Microsoft\Cryptography,ForceKeyProtection,REG_DWORD,undefined
+cis_cce_23921_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,FIPSAlgorithmPolicyEnabled,REG_DWORD,1
+cis_cce_24870_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager\Kernel,ObCaseInsensitive,REG_DWORD,1
+cis_cce_24633_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,ProtectionMode,REG_DWORD,enabled
+cis_cce_24878_1,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager\SubSystems,optional,REG_MULTI_SZ,Posix
+cis_cce_24939_1,true,true,HKEY_LOCAL_MACHINE,Software\Policies\Microsoft\Windows\Safer\CodeIdentifiers,AuthenticodeEnabled,REG_DWORD,1
+cis_cce_24134_9,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,FilterAdministratorToken,REG_DWORD,1
+cis_cce_23295_9,true,true,HKEY_LOCAL_MACHINE,SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\EnableUIA,DesktopToggle,REG_DWORD,0
+cis_cce_23877_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,ConsentPromptBehaviorAdmin,REG_DWORD,5
+cis_cce_24519_1,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,ConsentPromptBehaviorUser,REG_DWORD,3
+cis_cce_24498_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,EnableInstallerDetection,REG_DWORD,1
+cis_cce_23880_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,ValidateAdminCodeSignatures,REG_DWORD,0
+cis_cce_25471_4,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,EnableSecureUIAPaths,REG_DWORD,1
+cis_cce_23653_9,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,EnableLUA,REG_DWORD,1
+cis_cce_23656_2,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,PromptOnSecureDesktop,REG_DWORD,1
+cis_cce_24231_3,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,EnableVirtualization,REG_DWORD,1
+cis_cce_24839_3,true,true,HKEY_LOCAL_MACHINE,Software\Policies\Microsoft\WindowsFirewall\PublicProfile,DefaultInboundAction,REG_DWORD,1
