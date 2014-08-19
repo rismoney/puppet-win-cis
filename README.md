@@ -22,8 +22,9 @@ Status:
 - [x] sample keys.csv file
 - [x] cisfacts rspec testing
 - [ ] true windows confinement (reports n/a on non-windows)
-- [ ] full cis spec added to keys.csv
+- [80%] full cis spec added to keys.csv
 - [ ] module to remediate all cis to Pass
+- [x] added tailor file to put exceptions in on a per reference basis
 
 
 Sample CSV
