@@ -20,7 +20,7 @@ module Rismoney
     end
 
     def gettailorfilename
-      if ENV.key?('CIS_MOCKING')
+      if ENV.key?('CIS_MOCKING_TAILOR')
         return ENV['CIS_MOCKING_TAILOR'].to_s
       else
         return 'tailor.csv'
@@ -122,10 +122,16 @@ tailor = cis.csvread tailor_filename
 tailor_data = cis.csvprocess(tailor)
 
 domainrole=cis.isdc Facter.value(:ise_domainrole)
-  csv_data.each do |item|
-    if domainrole[:domaincontroller] == item[:domaincontroller].to_s or domainrole[:memberserver]  == item[:memberserver].to_s
-      Facter.add(item[:reference]) do
-      setcode { cis.value item}
+csv_data.each do |item|
+
+  if domainrole[:domaincontroller] == item[:domaincontroller].to_s or domainrole[:memberserver]  == item[:memberserver].to_s
+    Facter.add(item[:reference]) do
+      tailor_match = tailor_data.select{|tailors| tailors[:reference] == item[:reference]}
+      if tailor_match.empty?
+        setcode { cis.value item}
+      else 
+        setcode { tailor_match.first[:reason] }
+      end
     end
   end
 end
