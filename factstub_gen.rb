@@ -1,6 +1,6 @@
 require 'erb'
 require 'csv'
-path_to_csv = 'lib/facter/keys.csv'
+path_to_csv = 'lib/facter/CISWindows2012r2-1.1.0-keys.csv'
 name = []
 csv_contents = CSV.read(path_to_csv)
 csv_contents.shift

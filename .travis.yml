@@ -12,8 +12,8 @@ script:
 
 # http://about.travis-ci.org/docs/user/build-configuration/#Set-environment-variables
 env:
-  - PUPPET_VER='~> 3.0' FACTER_VER='~> 2.0'
-  - PUPPET_VER=2.7.22 FACTER_VER='<= 1.7.2'
+  - PUPPET_VER='~> 3.0' FACTER_VER='~> 2.0' CIS_MOCKING_TAILOR="CISWindows2012r2-1.1.0-tailor.csv.sample"
+  - PUPPET_VER=2.7.22 FACTER_VER='<= 1.7.2' CIS_MOCKING_TAILOR="CISWindows2012r2-1.1.0-tailor.csv.sample"
 
 matrix:
   allow_failures:

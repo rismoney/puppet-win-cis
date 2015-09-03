@@ -44,7 +44,7 @@ module Rismoney
     def reghive_table
       {
         :HKEY_LOCAL_MACHINE  => Win32::Registry::HKEY_LOCAL_MACHINE,
-        :HKEY_CURRENT_USER   => Win32::Registry::HKEY_CURRENT_USER,
+        #:HKEY_CURRENT_USER   => Win32::Registry::HKEY_CURRENT_USER,
       }
     end
 
@@ -104,11 +104,12 @@ module Rismoney
         continue
       rescue
         fact_name='undefined'
-    end
-  end
+      end
+   end
 end
-isedistrelease=Facter.value(:isedistrelease)
-if isedistrelease == "2012_r2"
+
+kernelrelease=Facter.value(:kernelrelease)
+if kernelrelease == '6.3.9600'
   cis=Rismoney::Cis.new
   filename = cis.getfilename
   csv = cis.csvread filename
@@ -116,7 +117,7 @@ if isedistrelease == "2012_r2"
   tailor_filename = cis.gettailorfilename
   tailor = cis.csvread tailor_filename
   tailor_data = cis.csvprocess(tailor)
-  domainrole=cis.isdc Facter.value(:ise_domainrole)
+  domainrole=cis.isdc Facter.value(:ise_domain_role)
   csv_data.each do |item|
 
     if domainrole[:domaincontroller] == item[:domaincontroller].to_s or domainrole[:memberserver]  == item[:memberserver].to_s

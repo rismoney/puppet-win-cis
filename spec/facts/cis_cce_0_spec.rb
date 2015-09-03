@@ -5,33 +5,34 @@ require 'registry'
 describe "on Windows" do
   before :each do
     ENV['CIS_MOCKING']="fake.csv"
+    Facter.fact(:kernelrelease).stubs(:value).returns('6.3.9600')
     load File.join(File.dirname(__FILE__), '../../', 'lib', 'facter', 'cis_cce_0.rb')
   end
 
   describe "cis_cce_0" do
     before :each do
       Facter.fact(:kernel).stubs(:value).returns('windows')
-      #load File.join(File.dirname(__FILE__), '../../', 'facts', 'ise_domain_role.rb')
+            Facter.fact(:ise_domain_role).stubs(:value).returns('Member_Server')
+      #load File.join(File.dirname(__FILE__), '../../', 'lib', 'facter', 'ise_domain_role.rb')
       # note no registry gem on linux, so we stub all win32::registry methods
-      Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo',:HKEY_CURRENT_USER=>'bar'})
+      Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo'})
     end
 
-    it "if value in csv file does not match value in registry fact should be no" do
+    it "if value in csv file does not match value in registry fact should be fail" do
       Rismoney::Cis.any_instance.stubs(:getKeyValue).returns('NotFake')
       Facter.fact(:cis_cce_0).value.should == 'fail'
     end
 
-    it "if value in csv file matches value in registry fact should be yes" do
+    it "if value in csv file matches value in registry fact should be pass" do
       Rismoney::Cis.any_instance.stubs(:getKeyValue).returns('Fake')
       Facter.fact(:cis_cce_0).value.should == 'pass'
     end
 
-    it "if value in csv file matches value in registry fact should be yes" do
+    it "if value in csv file matches value in registry fact should be undefined" do
       Rismoney::Cis.any_instance.stubs(:getKeyValue).returns('undefined')
       Facter.fact(:cis_cce_0).value.should == 'undefined'
     end
-
-  end
+ end
 end
 
 describe 'Rismoney::Cis' do
@@ -59,8 +60,8 @@ describe 'Rismoney::Cis' do
       before :each do
         ENV['CIS_MOCKING']=nil
       end
-      it 'getfilename should use keys.csv unless an environment variable is set' do
-        @cisclass.getfilename.should == 'keys.csv'
+      it 'getfilename should use CISWindows2012r2-1.1.0-keys.csv unless an environment variable is set' do
+        @cisclass.getfilename.should == 'CISWindows2012r2-1.1.0-keys.csv'
       end
     end
 
@@ -110,9 +111,8 @@ describe 'Rismoney::Cis' do
         @cisclass.fact_eval(keyval,sot).should == 'undefined'
       end
     end
- 
+
   end
-  
   describe 'windows_value item' do
     before :each do
       Rismoney::Cis.any_instance.stubs(:reghive_table).returns({:HKEY_LOCAL_MACHINE=>'foo',:HKEY_CURRENT_USER=>'bar'})
