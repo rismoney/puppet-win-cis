@@ -34,31 +34,6 @@ describe "on Windows" do
   end
 end
 
-describe 'other OS' do
-  before :each do
-    ENV['CIS_MOCKING']="fake.csv"
-    #load File.join(File.dirname(__FILE__), '../../', 'facts', 'cis_cce_0.rb')
-  end
-
-  context "when kernel => 'Linux'" do
-    before :each do
-      Facter.fact(:kernel).stubs(:value).returns('Linux')
-    end
-    it "Linux fact should return n/a" do
-      Facter.fact(:cis_cce_0).value.should == 'n/a'
-    end
-  end
-
-  context "when kernel => 'booga'" do
-    before :each do
-      Facter.fact(:kernel).stubs(:value).returns('booga')
-    end
-    it "Linux fact should return n/a" do
-      Facter.fact(:cis_cce_0).value.should == 'unknown'
-    end
-  end
-end
-
 describe 'Rismoney::Cis' do
   before :each do
     @cisclass = Rismoney::Cis.new

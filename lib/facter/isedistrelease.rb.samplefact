@@ -1,0 +1,49 @@
+# vim: set ts=2 sw=2 ai et:
+require 'facter'
+
+module Ise
+  class DistRelease
+    def self.value(os = Facter.value(:kernel))
+      case os
+        when 'windows'; windows_value
+        when 'Linux'  ; linux_value
+        else          ; 'unknown'
+      end
+    end
+
+    def self.linux_value
+      # lsbdistrelease => 6.3
+      Facter.value(:lsbdistrelease)
+    end
+
+    def self.windows_value
+      require 'facter/util/wmi'
+      isedistid = Facter.value(:isedistid)
+      kernelversion = Facter.value(:kernelversion)
+      isedistrelease = case [isedistid, kernelversion]
+        when ['workstation', '6.3.9600'] then "8.1"
+        when ['workstation', '6.2.9200'] then "8"
+        when ['workstation', '6.1.7601'] then "7_sp1"
+        when ['workstation', '6.1.7600'] then "7"
+        when ['workstation', '6.1.6001'] then "vista_sp1"
+        when ['workstation', '6.1.6000'] then "vista"
+        when ['workstation', '5.2.3790'] then "xp_x64"
+        when ['workstation', '5.1.2600'] then "xp"
+        when ['workstation', '5.0.2195'] then "2000"
+        when ['server', '6.3.9600'] then "2012_r2"
+        when ['server', '6.2.9200'] then "2012"
+        when ['server', '6.1.7601'] then "2008_r2_sp1"
+        when ['server', '6.1.7600'] then "2008_r2"
+        when ['server', '6.1.6001'] then "2008"
+        when ['server', '5.2.3790'] then "2003"
+        when ['server', '5.0.2195'] then "2000"
+        else "unknown"
+      end
+      isedistrelease
+    end
+  end
+end
+
+Facter.add(:isedistrelease) do
+  setcode { Ise::DistRelease.value }
+end

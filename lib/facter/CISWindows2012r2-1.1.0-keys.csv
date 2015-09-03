@@ -16,7 +16,7 @@ cis_cce_37431_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\P
 cis_cce_37614_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RequireStrongKey,REG_DWORD,1
 cis_cce_36056_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,DontDisplayLastUserName,REG_DWORD,1
 cis_cce_38235_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,InactivityTimeoutSecs,REG_DWORD,900
-cis_cce_37266_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,LegalNoticeText,REG_SZ,present
+cis_cce_37226_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,LegalNoticeText,REG_SZ,present
 cis_cce_37512_1,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,LegalNoticeCaption,REG_SZ,present
 cis_cce_37439_7,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,CachedLogonsCount,REG_SZ,4
 cis_cce_37622_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,PasswordExpiryWarning,REG_DWORD,14
