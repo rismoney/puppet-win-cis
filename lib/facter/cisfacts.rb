@@ -18,8 +18,10 @@ module Rismoney
     def gettailorfilename
       if ENV.key?('CIS_MOCKING_TAILOR')
         return ENV['CIS_MOCKING_TAILOR'].to_s
-      else
+      elsif File.exists?( File.expand_path('CISWindows2012r2-1.1.0-tailor.csv',File.dirname(__FILE__) ) )
         return 'CISWindows2012r2-1.1.0-tailor.csv'
+      else
+        return 'CISWindows2012r2-1.1.0-emptytailor.csv'
       end
     end
 
