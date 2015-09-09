@@ -3,6 +3,9 @@ require 'facter'
 
 module Rismoney
   class Cis
+
+    WOW64_64KEY = 0x100 unless defined?(WOW64_64KEY)
+
     def value(cis_item)
       windows_value cis_item
     end
@@ -68,9 +71,10 @@ module Rismoney
     def getKeyValue(hive, key_path, key_name)
       if RUBY_PLATFORM =~ /mswin|mingw32|windows/
         require 'win32/registry'
+        key64 = Win32::Registry::KEY_READ | WOW64_64KEY
       end
       begin
-        reg_obj=hive.open(key_path, Win32::Registry::KEY_READ)
+        reg_obj=hive.open(key_path, key64)
         reg_typ, reg_val = reg_obj.read(key_name)
       #need to investigate error handling when rspec'ing
       #rescue Win32::Registry::Error
