@@ -7,7 +7,7 @@ cis_cce_37701_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\Curre
 cis_cce_37942_0,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers,AddPrinterDrivers,REG_DWORD,1
 cis_cce_37848_9,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,SubmitControl,REG_DWORD,0
 cis_cce_35904_2,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\NTDS\Parameters,ldapserverintegrity,REG_DWORD,1
-cis_cce_36921_5,true,false,KEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RefusePasswordChange,REG_DWORD,0
+cis_cce_36921_5,true,false,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RefusePasswordChange,REG_DWORD,0
 cis_cce_36142_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,RequireSignorSeal,REG_DWORD,1
 cis_cce_37130_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,SealSecureChannel,REG_DWORD,1
 cis_cce_37222_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Netlogon\Parameters,SignSecureChannel,REG_DWORD,1
@@ -32,7 +32,7 @@ cis_cce_36170_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\L
 cis_cce_37067_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AutoAdminLogon,REG_SZ,0
 cis_cce_36871_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip6\Parameters,DisableIPSourceRouting,REG_DWORD,2
 cis_cce_36535_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,DisableIPSourceRouting,REG_DWORD,2
-cis_cce_36351,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,SafeDllSearchMode,REG_DWORD,Enabled
+cis_cce_36351_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,SafeDllSearchMode,REG_DWORD,Enabled
 cis_cce_37993_3,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,ScreenSaverGracePeriod,REG_SZ,0
 cis_cce_36880_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Eventlog\Security,WarningLevel,REG_DWORD,0.9
 cis_cce_36316_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,RestrictAnonymousSAM,REG_DWORD,1
