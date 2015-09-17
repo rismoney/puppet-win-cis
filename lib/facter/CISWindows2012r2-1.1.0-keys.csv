@@ -32,7 +32,7 @@ cis_cce_36170_9,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\L
 cis_cce_37067_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AutoAdminLogon,REG_SZ,0
 cis_cce_36871_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip6\Parameters,DisableIPSourceRouting,REG_DWORD,2
 cis_cce_36535_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Tcpip\Parameters,DisableIPSourceRouting,REG_DWORD,2
-cis_cce_36351_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,SafeDllSearchMode,REG_DWORD,Enabled
+cis_cce_36351_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Session Manager,SafeDllSearchMode,REG_DWORD,1
 cis_cce_37993_3,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,ScreenSaverGracePeriod,REG_SZ,0
 cis_cce_36880_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\Eventlog\Security,WarningLevel,REG_DWORD,0.9
 cis_cce_36316_8,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,RestrictAnonymousSAM,REG_DWORD,1
