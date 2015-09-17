@@ -1,6 +1,6 @@
 reference,domaincontroller,memberserver,reghive,key,keyname,keytype,keyvalue
 cis_cce_35487_8,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System,NoConnectedUser,REG_DWORD,0
-cis_cce_37615_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,REG_DWORD,0
+cis_cce_37615_2,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LimitBlankPasswordUse,REG_DWORD,1
 cis_cce_37850_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,scenoapplylegacyauditpolicy,REG_DWORD,1
 cis_cce_35907_5,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,crashonauditfail,REG_DWORD,0
 cis_cce_37701_0,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows NT\CurrentVersion\Winlogon,AllocateDASD,REG_SZ,0
