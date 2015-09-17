@@ -45,7 +45,7 @@ cis_cce_36021_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Services\L
 cis_cce_37623_6,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,ForceGuest,REG_DWORD,0
 cis_cce_38341_4,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,UseMachineId,REG_DWORD,1
 cis_cce_37035_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\MSV1_0,allownullsessionfallback,REG_DWORD,0
-cis_cce_38047_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\pku2u,AllowOnlineID,REG_DWORD,tbd
+cis_cce_38047_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa\pku2u,AllowOnlineID,REG_DWORD,0
 cis_cce_37755_6,true,true,HKEY_LOCAL_MACHINE,Software\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters,SupportedEncryptionTypes,undefined,undefined
 cis_cce_36326_7,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,NoLMHash,REG_DWORD,enabled
 cis_cce_36173_3,true,true,HKEY_LOCAL_MACHINE,System\CurrentControlSet\Control\Lsa,LmCompatibilityLevel,REG_DWORD,5
